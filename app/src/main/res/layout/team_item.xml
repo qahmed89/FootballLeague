@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+<androidx.cardview.widget.CardView app:cardCornerRadius="5dp"
+    app:cardElevation="5dp"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:layout_margin="10dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:padding="5dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+       <TextView
+           android:layout_width="0dp"
+           android:layout_height="wrap_content"
+           android:layout_weight="3"
+           android:text="Team Name :"></TextView>
+
+            <TextView
+                android:id="@+id/name_team"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Aston Villa"
+                android:textAlignment="center"
+                android:layout_weight="7">
+
+            </TextView>
+        </LinearLayout>
+        <LinearLayout
+            android:padding="5dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:text="Website :"></TextView>
+
+            <TextView
+                android:id="@+id/website_team"
+                android:layout_width="0dp"
+                android:textSize="18sp"
+                android:layout_height="wrap_content"
+                android:textColorLink="#FFFAE3"
+                android:text="http://www.avfc.co.uk"
+                android:textAlignment="center"
+                android:layout_weight="7">
+
+            </TextView>
+        </LinearLayout>
+        <LinearLayout
+            android:padding="5dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:text="Club colors :"></TextView>
+
+            <TextView
+                android:id="@+id/color_team"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Claret / Sky Blue"
+                android:textAlignment="center"
+                android:layout_weight="7">
+
+            </TextView>
+        </LinearLayout>
+        <LinearLayout
+            android:padding="5dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:text="venue :"></TextView>
+
+            <TextView
+                android:id="@+id/venue_team"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Villa Park"
+                android:textAlignment="center"
+                android:layout_weight="7">
+
+            </TextView>
+        </LinearLayout>
+        <LinearLayout
+            android:padding="5dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:text="team players "></TextView>
+
+            <TextView
+                android:id="@+id/player"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Salah"
+                android:textAlignment="center"
+                android:layout_weight="7">
+
+            </TextView>
+        </LinearLayout>
+  </LinearLayout>
+
+</androidx.cardview.widget.CardView>
+</layout>

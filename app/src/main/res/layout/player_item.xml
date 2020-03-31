@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <androidx.cardview.widget.CardView app:cardCornerRadius="5dp"
+        app:cardElevation="5dp"
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:padding="5dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:text="Player Name :">
+
+                </TextView>
+
+                <TextView
+                    android:id="@+id/name_player"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Wesley"
+                    android:textAlignment="center"
+                    android:layout_weight="7">
+
+                </TextView>
+            </LinearLayout>
+            <LinearLayout
+                android:padding="5dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:text="position :"></TextView>
+
+                <TextView
+                    android:id="@+id/postion_player"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Attacker"
+                    android:textAlignment="center"
+                    android:layout_weight="7">
+
+                </TextView>
+            </LinearLayout>
+            <LinearLayout
+                android:padding="5dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:text="dateOfBirth :"></TextView>
+
+                <TextView
+                    android:id="@+id/dateofbirth_player"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="1996-11-26"
+                    android:textAlignment="center"
+                    android:layout_weight="7">
+
+                </TextView>
+            </LinearLayout>
+            <LinearLayout
+                android:padding="5dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:text="country:"></TextView>
+
+                <TextView
+                    android:id="@+id/countryofbirth_player"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Brazil"
+                    android:textAlignment="center"
+                    android:layout_weight="7">
+
+                </TextView>
+            </LinearLayout>
+            <LinearLayout
+                android:padding="5dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:text="role "></TextView>
+
+                <TextView
+                    android:id="@+id/role_player"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="PLAYER"
+                    android:textAlignment="center"
+                    android:layout_weight="7">
+
+                </TextView>
+            </LinearLayout>
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+</layout>
