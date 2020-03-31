@@ -106,40 +106,40 @@ public class MainActivity extends AppCompatActivity implements TeamsAdapter.OnTe
     }
 
 
-    private boolean islastindex(RecyclerView recycer) {
-        if (activityMainBinding.recyclerview.getAdapter().getItemCount() != 0) {
-            int intlastindex = ((LinearLayoutManager) recycer.getLayoutManager()).findLastCompletelyVisibleItemPosition();
-            return intlastindex != RecyclerView.NO_POSITION && intlastindex == recycer.getAdapter().getItemCount() - 1;
-        }
-        return false;
+//    private boolean islastindex(RecyclerView recycer) {
+//        if (activityMainBinding.recyclerview.getAdapter().getItemCount() != 0) {
+//            int intlastindex = ((LinearLayoutManager) recycer.getLayoutManager()).findLastCompletelyVisibleItemPosition();
+//            return intlastindex != RecyclerView.NO_POSITION && intlastindex == recycer.getAdapter().getItemCount() - 1;
+//        }
+//        return false;
+//
+//    }
 
-    }
 
+//    public void intrecycler(List<TeamsItem> list) {
+//        teamsAdapter = new TeamsAdapter(list, MainActivity.this);
+//        // teamsAdapter = new TeamsAdapter(itemList, detailsTeams2, this);
+//
+//        activityMainBinding.recyclerview.setLayoutManager(mLayoutManager);
+//        activityMainBinding.recyclerview.setAdapter(teamsAdapter);
+//        startindex = lastindex + 1;
+//        lastindex = lastindex * 2 + 1;
+//    }
 
-    public void intrecycler(List<TeamsItem> list) {
-        teamsAdapter = new TeamsAdapter(list, MainActivity.this);
-        // teamsAdapter = new TeamsAdapter(itemList, detailsTeams2, this);
-
-        activityMainBinding.recyclerview.setLayoutManager(mLayoutManager);
-        activityMainBinding.recyclerview.setAdapter(teamsAdapter);
-        startindex = lastindex + 1;
-        lastindex = lastindex * 2 + 1;
-    }
-
-    public void intrecycler2(List<TeamsItem> list) {
-        lastindex = teamsAdapter.getItemCount();
-        activityMainBinding.recyclerview.setLayoutManager(mLayoutManager);
-        RecyclerView.LayoutManager myLayoutManage2r = activityMainBinding.recyclerview.getLayoutManager();
-        if (startindex < 19) {
-            teamsAdapter.addItems(list);
-            startindex = lastindex + 1;
-            lastindex = itemList.size() - teamsAdapter.getItemCount();
-        }
-        //  teamsAdapter.addItems(list);
-        teamsAdapter.notifyDataSetChanged();
-        //  teamsAdapter.notifyItemRangeChanged(teamsAdapter.getItemCount(), list.size()-1 );
-
-    }
+//    public void intrecycler2(List<TeamsItem> list) {
+//        lastindex = teamsAdapter.getItemCount();
+//        activityMainBinding.recyclerview.setLayoutManager(mLayoutManager);
+//        RecyclerView.LayoutManager myLayoutManage2r = activityMainBinding.recyclerview.getLayoutManager();
+//        if (startindex < 19) {
+//            teamsAdapter.addItems(list);
+//            startindex = lastindex + 1;
+//            lastindex = itemList.size() - teamsAdapter.getItemCount();
+//        }
+//        //  teamsAdapter.addItems(list);
+//        teamsAdapter.notifyDataSetChanged();
+//        //  teamsAdapter.notifyItemRangeChanged(teamsAdapter.getItemCount(), list.size()-1 );
+//
+//    }
 
     public void fetshDAta(List<TeamsItem> teamsItems) {
         for (int i = 0; i < teamsItems.size(); i++) {
