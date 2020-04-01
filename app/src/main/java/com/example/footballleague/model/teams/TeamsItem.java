@@ -1,5 +1,6 @@
 package com.example.footballleague.model.teams;
 
+import com.example.footballleague.model.detailsteam.DetailsTeams;
 import com.google.gson.annotations.SerializedName;
 
 public class TeamsItem{
@@ -45,6 +46,15 @@ public class TeamsItem{
 
 	@SerializedName("email")
 	private String email;
+ private DetailsTeams detailsTeams;
+
+	public DetailsTeams getDetailsTeams() {
+		return detailsTeams;
+	}
+
+	public void setDetailsTeams(DetailsTeams detailsTeams) {
+		this.detailsTeams = detailsTeams;
+	}
 
 	public void setArea(Area area){
 		this.area = area;

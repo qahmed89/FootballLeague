@@ -19,10 +19,10 @@ public class FootballLeagueRepository {
         this.footballLeagueServices = footballLeagueServices;
     }
 
-    public Flowable<Teams> Teams(String token, int id) {
+    public Observable<Teams> Teams(String token, int id) {
         return footballLeagueServices.getTeams(token, id);
     }
-    public Flowable<DetailsTeams> DetailsTeams(String token, int id) {
+    public Observable<DetailsTeams> DetailsTeams(String token, int id) {
         return footballLeagueServices.getDetailsTeams(token, id);
     }
 

@@ -63,7 +63,7 @@ OnTeamslistener onTeamslistener;
         holder.color.setText(itemList.get(position).getClubColors());
       //  holder.website.setText(itemList.get(position).getWebsite());
         holder.venue.setText(itemList.get(position).getVenue());
-       holder.players.setText(detailsTeams.get(position).getSquad().toString().replace("[","").replace("]",""));
+       holder.players.setText(itemList.get(position).getDetailsTeams().getSquad().toString().replace("[","").replace("]",""));
         ClickableSpan clickableSpan=new ClickableSpan() {
             @Override
             public void onClick(@NonNull View view) {

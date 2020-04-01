@@ -14,10 +14,10 @@ import retrofit2.http.Path;
 public interface FootballLeagueServices {
 
 @GET("competitions/{id}/teams")
-Flowable<Teams> getTeams(@Header("X-Auth-Token") String token,
+Observable<Teams> getTeams(@Header("X-Auth-Token") String token,
                            @Path(value = "id", encoded = true) int id);
 
     @GET("teams/{id}")
-    Flowable<DetailsTeams> getDetailsTeams(@Header("X-Auth-Token") String token,
+    Observable<DetailsTeams> getDetailsTeams(@Header("X-Auth-Token") String token,
                                            @Path(value = "id", encoded = true) int id);
 }

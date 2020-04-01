@@ -1,11 +1,13 @@
 package com.example.footballleague.view;
 
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 import androidx.lifecycle.ViewModelProvider;
@@ -45,6 +47,7 @@ public class MainActivity extends AppCompatActivity implements TeamsAdapter.OnTe
 
     List<DetailsTeams> detailsTeams2;
 
+    @RequiresApi(api = Build.VERSION_CODES.N)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -64,9 +67,10 @@ public class MainActivity extends AppCompatActivity implements TeamsAdapter.OnTe
             itemList.addAll(teams.getTeams());
           //  p = new Paginator(itemList);
            // intrecycler(getPage(itemList, pagecount, 5));
-            fetshDAta(itemList);
+          //  fetshDAta(itemList);
             //     getPage(itemList,pagecount,6);
-//            teamsAdapter = new TeamsAdapter(itemList, detailsTeams2,this);
+            Log.i("Activtty",itemLiswt.toString());
+//            teamsAdapter = new TeamsAdapter(itemList,this);
 //            activityMainBinding.recyclerview.setLayoutManager(mLayoutManager);
 //            activityMainBinding.recyclerview.setAdapter(teamsAdapter);
 
@@ -130,7 +134,7 @@ public class MainActivity extends AppCompatActivity implements TeamsAdapter.OnTe
 //        lastindex = teamsAdapter.getItemCount();
 //        activityMainBinding.recyclerview.setLayoutManager(mLayoutManager);
 //        RecyclerView.LayoutManager myLayoutManage2r = activityMainBinding.recyclerview.getLayoutManager();
-//        if (startindex < 19) {
+//        if (startindex < 19) {0
 //            teamsAdapter.addItems(list);
 //            startindex = lastindex + 1;
 //            lastindex = itemList.size() - teamsAdapter.getItemCount();
@@ -141,27 +145,27 @@ public class MainActivity extends AppCompatActivity implements TeamsAdapter.OnTe
 //
 //    }
 
-    public void fetshDAta(List<TeamsItem> teamsItems) {
-        for (int i = 0; i < teamsItems.size(); i++) {
-
-            footballLeagueViewModel.getDetailsTeamsResponce(token, teamsItems.get(i).getId(), activityMainBinding.getRoot()).observe(this, detailsTeams -> {
-                detailsTeams2.add(detailsTeams);
-
-                HashSet<DetailsTeams> hashSet = new HashSet<DetailsTeams>();
-                hashSet.addAll(detailsTeams2);
-                detailsTeams2.clear();
-                detailsTeams2.addAll(hashSet);
-                if (detailsTeams2.size() == teamsItems.size()) {
-                       teamsAdapter = new TeamsAdapter(itemList, detailsTeams2, this,this::onTeamsClick);
-                    activityMainBinding.recyclerview.setLayoutManager(mLayoutManager);
-                    activityMainBinding.recyclerview.setAdapter(teamsAdapter);
-                    activityMainBinding.prograssbar.hide();
-
-                }
-            });
-
-        }
-    }
+//    public void fetshDAta(List<TeamsItem> teamsItems) {
+//        for (int i = 0; i < teamsItems.size(); i++) {
+//
+//            footballLeagueViewModel.getDetailsTeamsResponce(token, teamsItems.get(i).getId(), activityMainBinding.getRoot()).observe(this, detailsTeams -> {
+//                detailsTeams2.add(detailsTeams);
+//
+//                HashSet<DetailsTeams> hashSet = new HashSet<DetailsTeams>();
+//                hashSet.addAll(detailsTeams2);
+//                detailsTeams2.clear();
+//                detailsTeams2.addAll(hashSet);
+//                if (detailsTeams2.size() == teamsItems.size()) {
+//                       teamsAdapter = new TeamsAdapter(itemList, detailsTeams2, this,this::onTeamsClick);
+//                    activityMainBinding.recyclerview.setLayoutManager(mLayoutManager);
+//                    activityMainBinding.recyclerview.setAdapter(teamsAdapter);
+//                    activityMainBinding.prograssbar.hide();
+//
+//                }
+//            });
+//
+//        }
+//    }
 
 //    public static <TeamsItem> List<com.example.footballleague.model.teams.TeamsItem> getPage(List<com.example.footballleague.model.teams.TeamsItem> sourceList, int page, int pageSize) {
 //        if (pageSize <= 0 || page <= 0) {
