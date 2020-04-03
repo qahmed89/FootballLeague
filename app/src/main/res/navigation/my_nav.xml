@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_nav"
+    app:startDestination="@id/mainFragment">
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.example.footballleague.view.MainFragment"
+        android:label="@string/app_name">
+        <action
+            android:id="@+id/action_mainFragment_to_detailsFragment2"
+            app:destination="@id/detailsFragment"
+            app:enterAnim="@anim/fragment_open_enter"
+            app:exitAnim="@anim/nav_default_exit_anim" />
+        <argument
+            android:name="postion"
+            android:defaultValue="-1"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailsFragment"
+        android:name="com.example.footballleague.view.DetailsFragment"
+        android:label="ListPlayers"
+        tools:layout="@layout/fragment_details">
+        <action
+            android:id="@+id/action_detailsFragment_to_mainFragment"
+            app:destination="@id/mainFragment"
+
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/fragment_close_exit"
+            app:popExitAnim="@anim/fragment_fade_exit"
+            app:popUpTo="@id/mainFragment" />
+        <argument
+            android:name="postion"
+            android:defaultValue="-1"
+            app:argType="integer" />
+    </fragment>
+</navigation>

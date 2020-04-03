@@ -1,65 +1,87 @@
 package com.example.footballleague.model.teams;
 
+import androidx.annotation.Nullable;
+
 import java.util.List;
 
 import com.example.footballleague.model.detailsteam.DetailsTeams;
 import com.google.gson.annotations.SerializedName;
 
 public class Teams{
+	@Nullable
 
 	@SerializedName("teams")
 	private List<TeamsItem> teams;
+	@Nullable
 
 	@SerializedName("count")
 	private int count;
+	@Nullable
 
 	@SerializedName("season")
 	private Season season;
+	@Nullable
 
 	@SerializedName("competition")
 	private Competition competition;
-
+@Nullable
 	@SerializedName("filters")
 	private Filters filters;
+	@Nullable
 
-	public void setTeams(List<TeamsItem> teams){
-		this.teams = teams;
+ private List<DetailsTeams> detailsTeams;
+
+	@Nullable
+	public List<DetailsTeams> getDetailsTeams() {
+		return detailsTeams;
 	}
 
-	public List<TeamsItem> getTeams(){
+	public void setDetailsTeams(@Nullable List<DetailsTeams> detailsTeams) {
+		this.detailsTeams = detailsTeams;
+	}
+
+	@Nullable
+	public List<TeamsItem> getTeams() {
 		return teams;
 	}
 
-	public void setCount(int count){
-		this.count = count;
+	public void setTeams(@Nullable List<TeamsItem> teams) {
+		this.teams = teams;
 	}
 
-	public int getCount(){
+	public int getCount() {
 		return count;
 	}
 
-	public void setSeason(Season season){
-		this.season = season;
+	public void setCount(int count) {
+		this.count = count;
 	}
 
-	public Season getSeason(){
+	@Nullable
+	public Season getSeason() {
 		return season;
 	}
 
-	public void setCompetition(Competition competition){
-		this.competition = competition;
+	public void setSeason(@Nullable Season season) {
+		this.season = season;
 	}
 
-	public Competition getCompetition(){
+	@Nullable
+	public Competition getCompetition() {
 		return competition;
 	}
 
-	public void setFilters(Filters filters){
-		this.filters = filters;
+	public void setCompetition(@Nullable Competition competition) {
+		this.competition = competition;
 	}
 
-	public Filters getFilters(){
+	@Nullable
+	public Filters getFilters() {
 		return filters;
+	}
+
+	public void setFilters(@Nullable Filters filters) {
+		this.filters = filters;
 	}
 
 	@Override

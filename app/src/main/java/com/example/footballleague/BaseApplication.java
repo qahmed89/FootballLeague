@@ -12,13 +12,11 @@ import io.reactivex.plugins.RxJavaPlugins;
 public class BaseApplication extends Application {
 
     private AppComponent appComponent;
-    String mLanguageCode = "ar";
 
 
     @Override
     public void onCreate() {
         super.onCreate();
-//        LocaleHelper.setLocale(getApplicationContext(), mLanguageCode);
 
         appComponent = DaggerAppComponent.create();
       RxJavaPlugins.setErrorHandler(throwable -> {});

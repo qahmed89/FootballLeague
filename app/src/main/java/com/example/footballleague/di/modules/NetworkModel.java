@@ -29,9 +29,8 @@ public class NetworkModel {
         return new Retrofit.Builder()
 
                 .baseUrl("https://api.football-data.org/v2/")
-                .addConverterFactory(GsonConverterFactory.create())
                 .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
-                .client(okHttpClient)
+                .addConverterFactory(GsonConverterFactory.create())
                 .build();
 
     }

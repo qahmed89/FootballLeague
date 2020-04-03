@@ -1,184 +1,217 @@
 package com.example.footballleague.model.detailsteam;
 
+import androidx.annotation.Nullable;
+
+import java.io.Serializable;
 import java.util.List;
 import com.google.gson.annotations.SerializedName;
+ //With this annotation we are going to hide compiler warnings
 
-public class DetailsTeams{
-
+public class DetailsTeams  {
+@Nullable
 	@SerializedName("area")
 	private Area area;
+	@Nullable
 
 	@SerializedName("venue")
 	private String venue;
+	@Nullable
 
 	@SerializedName("website")
 	private String website;
+	@Nullable
 
 	@SerializedName("address")
 	private String address;
+	@Nullable
 
 	@SerializedName("crestUrl")
 	private String crestUrl;
+	@Nullable
 
 	@SerializedName("tla")
 	private String tla;
+	@Nullable
 
 	@SerializedName("founded")
 	private int founded;
+	@Nullable
 
 	@SerializedName("lastUpdated")
 	private String lastUpdated;
+	@Nullable
 
 	@SerializedName("clubColors")
 	private String clubColors;
+	@Nullable
 
 	@SerializedName("squad")
 	private List<SquadItem> squad;
+	@Nullable
 
 	@SerializedName("phone")
 	private String phone;
+	@Nullable
 
 	@SerializedName("name")
 	private String name;
+	@Nullable
 
 	@SerializedName("activeCompetitions")
 	private List<ActiveCompetitionsItem> activeCompetitions;
+	@Nullable
 
 	@SerializedName("id")
 	private int id;
+	@Nullable
 
 	@SerializedName("shortName")
 	private String shortName;
+	@Nullable
 
 	@SerializedName("email")
-	private Object email;
+	private String email;
 
-	public void setArea(Area area){
-		this.area = area;
-	}
-
-	public Area getArea(){
+	@Nullable
+	public Area getArea() {
 		return area;
 	}
 
-	public void setVenue(String venue){
-		this.venue = venue;
+	public void setArea(@Nullable Area area) {
+		this.area = area;
 	}
 
-	public String getVenue(){
+	@Nullable
+	public String getVenue() {
 		return venue;
 	}
 
-	public void setWebsite(String website){
-		this.website = website;
+	public void setVenue(@Nullable String venue) {
+		this.venue = venue;
 	}
 
-	public String getWebsite(){
+	@Nullable
+	public String getWebsite() {
 		return website;
 	}
 
-	public void setAddress(String address){
-		this.address = address;
+	public void setWebsite(@Nullable String website) {
+		this.website = website;
 	}
 
-	public String getAddress(){
+	@Nullable
+	public String getAddress() {
 		return address;
 	}
 
-	public void setCrestUrl(String crestUrl){
-		this.crestUrl = crestUrl;
+	public void setAddress(@Nullable String address) {
+		this.address = address;
 	}
 
-	public String getCrestUrl(){
+	@Nullable
+	public String getCrestUrl() {
 		return crestUrl;
 	}
 
-	public void setTla(String tla){
-		this.tla = tla;
+	public void setCrestUrl(@Nullable String crestUrl) {
+		this.crestUrl = crestUrl;
 	}
 
-	public String getTla(){
+	@Nullable
+	public String getTla() {
 		return tla;
 	}
 
-	public void setFounded(int founded){
-		this.founded = founded;
+	public void setTla(@Nullable String tla) {
+		this.tla = tla;
 	}
 
-	public int getFounded(){
+	public int getFounded() {
 		return founded;
 	}
 
-	public void setLastUpdated(String lastUpdated){
-		this.lastUpdated = lastUpdated;
+	public void setFounded(int founded) {
+		this.founded = founded;
 	}
 
-	public String getLastUpdated(){
+	@Nullable
+	public String getLastUpdated() {
 		return lastUpdated;
 	}
 
-	public void setClubColors(String clubColors){
-		this.clubColors = clubColors;
+	public void setLastUpdated(@Nullable String lastUpdated) {
+		this.lastUpdated = lastUpdated;
 	}
 
-	public String getClubColors(){
+	@Nullable
+	public String getClubColors() {
 		return clubColors;
 	}
 
-	public void setSquad(List<SquadItem> squad){
-		this.squad = squad;
+	public void setClubColors(@Nullable String clubColors) {
+		this.clubColors = clubColors;
 	}
 
-	public List<SquadItem> getSquad(){
+	@Nullable
+	public List<SquadItem> getSquad() {
 		return squad;
 	}
 
-	public void setPhone(String phone){
-		this.phone = phone;
+	public void setSquad(@Nullable List<SquadItem> squad) {
+		this.squad = squad;
 	}
 
-	public String getPhone(){
+	@Nullable
+	public String getPhone() {
 		return phone;
 	}
 
-	public void setName(String name){
-		this.name = name;
+	public void setPhone(@Nullable String phone) {
+		this.phone = phone;
 	}
 
-	public String getName(){
+	@Nullable
+	public String getName() {
 		return name;
 	}
 
-	public void setActiveCompetitions(List<ActiveCompetitionsItem> activeCompetitions){
-		this.activeCompetitions = activeCompetitions;
+	public void setName(@Nullable String name) {
+		this.name = name;
 	}
 
-	public List<ActiveCompetitionsItem> getActiveCompetitions(){
+	@Nullable
+	public List<ActiveCompetitionsItem> getActiveCompetitions() {
 		return activeCompetitions;
 	}
 
-	public void setId(int id){
-		this.id = id;
+	public void setActiveCompetitions(@Nullable List<ActiveCompetitionsItem> activeCompetitions) {
+		this.activeCompetitions = activeCompetitions;
 	}
 
-	public int getId(){
+	public int getId() {
 		return id;
 	}
 
-	public void setShortName(String shortName){
-		this.shortName = shortName;
+	public void setId(int id) {
+		this.id = id;
 	}
 
-	public String getShortName(){
+	@Nullable
+	public String getShortName() {
 		return shortName;
 	}
 
-	public void setEmail(Object email){
-		this.email = email;
+	public void setShortName(@Nullable String shortName) {
+		this.shortName = shortName;
 	}
 
-	public Object getEmail(){
+	@Nullable
+	public String getEmail() {
 		return email;
+	}
+
+	public void setEmail(@Nullable String email) {
+		this.email = email;
 	}
 
 	@Override

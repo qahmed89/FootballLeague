@@ -1,29 +1,34 @@
 package com.example.footballleague.model.detailsteam;
 
+import androidx.annotation.Nullable;
+
 import com.google.gson.annotations.SerializedName;
 
 public class Area{
+	@Nullable
 
 	@SerializedName("name")
 	private String name;
+	@Nullable
 
 	@SerializedName("id")
 	private int id;
 
-	public void setName(String name){
-		this.name = name;
-	}
-
-	public String getName(){
+	@Nullable
+	public String getName() {
 		return name;
 	}
 
-	public void setId(int id){
-		this.id = id;
+	public void setName(@Nullable String name) {
+		this.name = name;
 	}
 
-	public int getId(){
+	public int getId() {
 		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
 	}
 
 	@Override

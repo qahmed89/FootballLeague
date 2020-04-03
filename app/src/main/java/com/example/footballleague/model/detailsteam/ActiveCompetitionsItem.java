@@ -1,73 +1,87 @@
 package com.example.footballleague.model.detailsteam;
 
+import androidx.annotation.Nullable;
+
 import com.google.gson.annotations.SerializedName;
 
+
 public class ActiveCompetitionsItem{
+	@Nullable
 
 	@SerializedName("area")
 	private Area area;
+	@Nullable
 
 	@SerializedName("lastUpdated")
 	private String lastUpdated;
+	@Nullable
 
 	@SerializedName("code")
 	private String code;
+	@Nullable
 
 	@SerializedName("name")
 	private String name;
+	@Nullable
 
 	@SerializedName("id")
 	private int id;
+	@Nullable
 
 	@SerializedName("plan")
 	private String plan;
 
-	public void setArea(Area area){
-		this.area = area;
-	}
-
-	public Area getArea(){
+	@Nullable
+	public Area getArea() {
 		return area;
 	}
 
-	public void setLastUpdated(String lastUpdated){
-		this.lastUpdated = lastUpdated;
+	public void setArea(@Nullable Area area) {
+		this.area = area;
 	}
 
-	public String getLastUpdated(){
+	@Nullable
+	public String getLastUpdated() {
 		return lastUpdated;
 	}
 
-	public void setCode(String code){
-		this.code = code;
+	public void setLastUpdated(@Nullable String lastUpdated) {
+		this.lastUpdated = lastUpdated;
 	}
 
-	public String getCode(){
+	@Nullable
+	public String getCode() {
 		return code;
 	}
 
-	public void setName(String name){
-		this.name = name;
+	public void setCode(@Nullable String code) {
+		this.code = code;
 	}
 
-	public String getName(){
+	@Nullable
+	public String getName() {
 		return name;
 	}
 
-	public void setId(int id){
-		this.id = id;
+	public void setName(@Nullable String name) {
+		this.name = name;
 	}
 
-	public int getId(){
+	public int getId() {
 		return id;
 	}
 
-	public void setPlan(String plan){
-		this.plan = plan;
+	public void setId(int id) {
+		this.id = id;
 	}
 
-	public String getPlan(){
+	@Nullable
+	public String getPlan() {
 		return plan;
+	}
+
+	public void setPlan(@Nullable String plan) {
+		this.plan = plan;
 	}
 
 	@Override

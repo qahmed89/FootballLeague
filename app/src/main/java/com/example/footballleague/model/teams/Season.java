@@ -1,9 +1,11 @@
 package com.example.footballleague.model.teams;
 
+import androidx.annotation.Nullable;
+
 import com.google.gson.annotations.SerializedName;
 
 public class Season{
-
+@Nullable
 	@SerializedName("winner")
 	private Object winner;
 
@@ -19,12 +21,12 @@ public class Season{
 	@SerializedName("startDate")
 	private String startDate;
 
-	public void setWinner(Object winner){
+	public Season(@Nullable Object winner) {
 		this.winner = winner;
 	}
 
-	public Object getWinner(){
-		return winner;
+	public void setWinner(@Nullable Object winner) {
+		this.winner = winner;
 	}
 
 	public void setCurrentMatchday(int currentMatchday){

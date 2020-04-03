@@ -3,9 +3,9 @@ package com.example.footballleague.di.components;
 
 import com.example.footballleague.di.modules.ContextModel;
 import com.example.footballleague.di.modules.NetworkModel;
-import com.example.footballleague.model.detailsteam.DetailsTeams;
-import com.example.footballleague.view.DetailsTeamActivity;
+import com.example.footballleague.view.DetailsFragment;
 import com.example.footballleague.view.MainActivity;
+import com.example.footballleague.view.MainFragment;
 
 import javax.inject.Singleton;
 
@@ -17,7 +17,8 @@ public interface AppComponent {
 
 
     void inject(MainActivity mainActivity);
-    void inject(DetailsTeamActivity detailsTeamActivity);
+    void injectFragment(MainFragment mainFragment);
+    void injectFragment(DetailsFragment detailsFragment);
 
 
 }

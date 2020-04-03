@@ -1,95 +1,110 @@
 package com.example.footballleague.model.detailsteam;
 
+import androidx.annotation.Nullable;
+
 import com.google.gson.annotations.SerializedName;
 
 public class SquadItem{
-
+@Nullable
 	@SerializedName("role")
 	private String role;
+	@Nullable
 
 	@SerializedName("nationality")
 	private String nationality;
+	@Nullable
 
 	@SerializedName("countryOfBirth")
 	private String countryOfBirth;
+	@Nullable
 
 	@SerializedName("shirtNumber")
 	private int shirtNumber;
+	@Nullable
 
 	@SerializedName("name")
 	private String name;
+	@Nullable
 
 	@SerializedName("dateOfBirth")
 	private String dateOfBirth;
+	@Nullable
 
 	@SerializedName("id")
 	private int id;
+	@Nullable
 
 	@SerializedName("position")
 	private String position;
 
-	public void setRole(String role){
-		this.role = role;
-	}
-
-	public String getRole(){
+	@Nullable
+	public String getRole() {
 		return role;
 	}
 
-	public void setNationality(String nationality){
-		this.nationality = nationality;
+	public void setRole(@Nullable String role) {
+		this.role = role;
 	}
 
-	public String getNationality(){
+	@Nullable
+	public String getNationality() {
 		return nationality;
 	}
 
-	public void setCountryOfBirth(String countryOfBirth){
-		this.countryOfBirth = countryOfBirth;
+	public void setNationality(@Nullable String nationality) {
+		this.nationality = nationality;
 	}
 
-	public String getCountryOfBirth(){
+	@Nullable
+	public String getCountryOfBirth() {
 		return countryOfBirth;
 	}
 
-	public void setShirtNumber(int shirtNumber){
-		this.shirtNumber = shirtNumber;
+	public void setCountryOfBirth(@Nullable String countryOfBirth) {
+		this.countryOfBirth = countryOfBirth;
 	}
 
-	public int getShirtNumber(){
+	public int getShirtNumber() {
 		return shirtNumber;
 	}
 
-	public void setName(String name){
-		this.name = name;
+	public void setShirtNumber(int shirtNumber) {
+		this.shirtNumber = shirtNumber;
 	}
 
-	public String getName(){
+	@Nullable
+	public String getName() {
 		return name;
 	}
 
-	public void setDateOfBirth(String dateOfBirth){
-		this.dateOfBirth = dateOfBirth;
+	public void setName(@Nullable String name) {
+		this.name = name;
 	}
 
-	public String getDateOfBirth(){
+	@Nullable
+	public String getDateOfBirth() {
 		return dateOfBirth;
 	}
 
-	public void setId(int id){
-		this.id = id;
+	public void setDateOfBirth(@Nullable String dateOfBirth) {
+		this.dateOfBirth = dateOfBirth;
 	}
 
-	public int getId(){
+	public int getId() {
 		return id;
 	}
 
-	public void setPosition(String position){
-		this.position = position;
+	public void setId(int id) {
+		this.id = id;
 	}
 
-	public String getPosition(){
+	@Nullable
+	public String getPosition() {
 		return position;
+	}
+
+	public void setPosition(@Nullable String position) {
+		this.position = position;
 	}
 
 	@Override
