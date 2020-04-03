@@ -73,7 +73,6 @@ public class TeamsAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
             SpannableString spannableString = new SpannableString(itemList.get(position).getWebsite());
             ((TeamsHolder) holder).name_team.setText(itemList.get(position).getName());
             ((TeamsHolder) holder).color.setText(itemList.get(position).getClubColors());
-            //  holder.website.setText(itemList.get(position).getWebsite());
             ((TeamsHolder) holder).venue.setText(itemList.get(position).getVenue());
             ((TeamsHolder) holder).players.setText(detailsTeams.get(position).getSquad().toString().replace("[", "").replace("]", ""));
             ClickableSpan clickableSpan = new ClickableSpan() {
